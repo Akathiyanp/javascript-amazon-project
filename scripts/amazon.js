@@ -1,34 +1,3 @@
-const products = [
-  {
-    //object = group multiple values together
-    image: "images/products/men-chino-pants-beige.jpg",
-    name: "Yellowish White Stylish Cotton Pant - 1 Pair",
-    rating: {
-      stars: 50,
-      count: 1870,
-    },
-    priceCents: 1090, // <-In cent  (10.90)  1 dollor = 100 cents
-  },
-  {
-    image: "images/products/men-slim-fit-summer-shorts-gray.jpg",
-    name: "Men Slim fit Summer Shorts gray",
-    rating: {
-      stars: 25,
-      count: 127,
-    },
-    priceCents: 2095,
-  },
-  {
-    image: "images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg",
-    name: "Adults Plain Cotton T-Shirt - 2 Pack",
-    rating: {
-      stars: 45,
-      count: 56,
-    },
-    priceCents: 799,
-  },
-]; // array represent a list
-
 let productsHTML = "";
 
 products.forEach((product) => {
@@ -44,7 +13,7 @@ products.forEach((product) => {
 
           <div class="product-rating-container">
             <img class="product-rating-stars"
-              src="images/ratings/rating-${product.rating.stars}.png">
+              src="images/ratings/rating-${product.rating.stars*10}.png">
             <div class="product-rating-count link-primary">
               ${product.rating.count}
             </div>
